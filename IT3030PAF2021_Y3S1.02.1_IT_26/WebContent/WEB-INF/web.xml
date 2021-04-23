@@ -26,7 +26,7 @@
 
 <servlet-mapping>
  <servlet-name>Jersey Web Application</servlet-name>
- <url-pattern>/OrderPaymentService/*</url-pattern>
+ <url-pattern>/PaymentService/*</url-pattern>
 </servlet-mapping>
 
 <servlet-mapping>
