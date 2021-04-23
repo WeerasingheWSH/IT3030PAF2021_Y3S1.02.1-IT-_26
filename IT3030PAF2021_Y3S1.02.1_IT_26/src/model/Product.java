@@ -11,8 +11,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+//IT19042220
+//Weerasinghe W.S.H.
+
 public class Product { 
+	
 	// A common method to connect to the DB
+	
 	private Connection connect() {
 		Connection con = null;
 		try {
@@ -26,12 +31,14 @@ public class Product {
 		return con;
 	}
 
+	// Insert Methods
+	
 	public String insertItem(String name, String price, String manu, String exp ,String rating ,String units) {
 		String output = "";
 		try {
 			Connection con = connect();
 			if (con == null) {
-				return "Error while connecting to the database for inserting.";
+				return "Error while connecting to the Database for inserting.";
 			}
 			// create a prepared statement
 			String query = " insert into product (`productID`,`ProductName`,`ProductPrice`,`ManufactureDate`,`ExpireDate`,`ProductRatings`,`NoOfUnits`)"
@@ -49,14 +56,16 @@ public class Product {
 			// execute the statement3
 			preparedStmt.execute();
 			con.close();
-			output = "Inserted successfully";
+			output = "Product Adding successfully";
 		} catch (Exception e) {
-			output = "Error while inserting the Product.";
+			output = "Error while Adding the Product.";
 			System.err.println(e.getMessage());
 		}
 		return output;
 	}
 
+	// Read Methods
+	
 	public String readItems() {
 		String output = "";
 		try {
@@ -108,12 +117,14 @@ public class Product {
 			// Complete the html table
 			output += "</table>";
 		} catch (Exception e) {
-			output = "Error while reading the items.";
+			output = "Error while reading the Products.";
 			System.err.println(e.getMessage());
 		}
 		return output;
 	}
 
+	// Update Methods
+	
 	public String updateItem(String ID,String name, String price, String manu, String exp ,String rating ,String units) {
 		String output = "";
 		try {
@@ -137,7 +148,7 @@ public class Product {
 			// execute the statement
 			preparedStmt.execute();
 			con.close();
-			output = "Updated successfully";
+			output = "Updated Product successfully";
 		} catch (Exception e) {
 			output = "Error while updating the Product.";
 			System.err.println(e.getMessage());
@@ -145,6 +156,8 @@ public class Product {
 		return output;
 	}
 
+	// Delete Methods
+	
 	public String deleteItem(String productID) {
 		String output = "";
 		try {
@@ -160,7 +173,7 @@ public class Product {
 			// execute the statement
 			preparedStmt.execute();
 			con.close();
-			output = "Deleted successfully";
+			output = "Deleted Product successfully";
 		} catch (Exception e) {
 			output = "Error while deleting the Product.";
 			System.err.println(e.getMessage());
