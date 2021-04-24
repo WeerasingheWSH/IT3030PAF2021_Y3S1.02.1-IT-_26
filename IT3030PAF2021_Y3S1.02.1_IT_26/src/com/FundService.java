@@ -1,6 +1,7 @@
 package com;
 
 //IT19040318
+
 //DE SILVA U.S.C
 //FUND MANAGEMENT SERVICE
 
@@ -31,7 +32,7 @@ public class FundService {
 	 }
 	
 	
-	
+	//post request
 	@POST
 	@Path("/")
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
@@ -45,7 +46,7 @@ public class FundService {
 	}
 	
 
-	
+	//put  request
 	@PUT
 	@Path("/")
 	@Consumes(MediaType.APPLICATION_JSON)
@@ -65,7 +66,7 @@ public class FundService {
 		return output;
 	}
 	
-	
+	//delete
 	@DELETE
 	@Path("/")
 	@Consumes(MediaType.APPLICATION_XML)

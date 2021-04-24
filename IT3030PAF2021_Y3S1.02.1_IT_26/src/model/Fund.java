@@ -1,6 +1,7 @@
 package model;
 
 //IT19040318
+
 //DE SILVA U.S.C
 //FUND MANAGEMENT SERVICE
 
@@ -45,7 +46,7 @@ public class Fund {
 					PreparedStatement preparedStmt = con.prepareStatement(query);
 	 
 					// binding values
-					 preparedStmt.setInt(1, 0); 
+					 preparedStmt.setInt(1, 0); // add for auto increment in DB
 					 preparedStmt.setString(2, name);
 					 preparedStmt.setDouble(3, Double.parseDouble(price));
 					 preparedStmt.setString(4, desc);
@@ -58,7 +59,7 @@ public class Fund {
 	       }
 			catch (Exception e)
 			{
-					 output = "Error while inserting the item.";
+					 output = "Error while inserting the fund.";
 					 System.err.println(e.getMessage());
 			}
 			
