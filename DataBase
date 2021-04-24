@@ -1,0 +1,67 @@
+// IT19042220
+// Weerasinghe W.S.H
+
+CREATE TABLE `products`.`product` 
+( `productID` INT(11) NOT NULL AUTO_INCREMENT ,
+`ProductName` VARCHAR(50) NOT NULL , 
+`ProductPrice` VARCHAR(50) NOT NULL , 
+`ManufactureDate` VARCHAR(50) NOT NULL ,
+`ExpireDate` VARCHAR(50) NOT NULL , 
+`ProductRatings` VARCHAR(50) NOT NULL , 
+`NoOfUnits` VARCHAR(50) NOT NULL ,
+PRIMARY KEY (`productID`)) ENGINE = InnoDB;
+
+// IT19041094
+//Pathirana G.P.O.E.
+
+CREATE TABLE `project`.`project` 
+( `projectID` INT(100) NOT NULL AUTO_INCREMENT , 
+`projectName` VARCHAR(100) NOT NULL , 
+`projectEmail` VARCHAR(20) NOT NULL , 
+`projectTitle` VARCHAR(100) NOT NULL , 
+`projectDesc` VARCHAR(100) NOT NULL , 
+`projectLink` VARCHAR(1000) NOT NULL , 
+`projectVideo` VARCHAR(1000) NOT NULL , 
+PRIMARY KEY (`projectID`)) ENGINE = InnoDB;
+
+// IT19040318 
+// De Silva U.S.C.
+
+ CREATE TABLE `fund`.`funddetails`(
+`fundId` INT(100) NOT NULL AUTO_INCREMENT , 
+`fundName` VARCHAR(100) NOT NULL , 
+`fundPrice` VARCHAR(100) NOT NULL , 
+`fundDesc` VARCHAR(100) NOT NULL , 
+ PRIMARY KEY (`fundId`)) ENGINE = InnoDB;
+ 
+ // IT19005072 
+ // Liyanage K.L.D.U.B.
+
+CREATE TABLE `payment.`payments`
+ ( `orderNo` VARCHAR(11) NOT NULL AUTO_INCREMENT ,
+ `productID` VARCHAR(11) NOT NULL ,
+ `name` VARCHAR(45) NOT NULL , 
+`address` VARCHAR(100) NOT NULL , 
+`phoneNO` VARCHAR(10) NOT NULL , 
+`email` VARCHAR(30) NOT NULL , 
+`paymentMethod` VARCHAR(45) NOT NULL ,
+ `orderDate` VARCHAR(45) NOT NULL ,
+ PRIMARY KEY (`orderNo`)) ENGINE = InnoDB;
+
+
+// IT18229530 
+//Madhubashini R.T
+
+CREATE TABLE `test`.`user` 
+( `UserID` INT(11) NOT NULL AUTO_INCREMENT , 
+`UserName` VARCHAR(30) NOT NULL , 
+`Email` VARCHAR(30) NOT NULL , 
+`Age` INT(5) NOT NULL ,
+`PhoneNumber` INT(10) NOT NULL ,
+`Password` VARCHAR(10) NOT NULL , 
+PRIMARY KEY (`UserID`)) ENGINE = InnoDB;
+
+ 
+
+ 
+ 
